@@ -1,0 +1,59 @@
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+img {
+    margin: 0 auto;
+}
+
+h1 {
+    font-weight: 600 !important;
+    text-transform: uppercase; 
+}
+
+h2 {
+    font-weight: 600 !important;
+    text-transform: uppercase; 
+}
+
+/* Classes */
+.space-between {
+    flex: 1 1 auto;
+}
+
+.main-container {
+    margin: 25px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.toolbar-search {
+    margin-top: 30px;
+}
+
+.input-search {
+    padding: 10px;
+}
+
+.m-l-sm {
+    margin-left:15px !important;
+}
+
+
+/* Modifying Angular Material Classes */
+.mat-form-field-infix {
+    border-top: 0;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-infix {
+    padding: 10px !important;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0 !important;
+}
+
+.mat-form-field {
+    margin: 5px;
+}

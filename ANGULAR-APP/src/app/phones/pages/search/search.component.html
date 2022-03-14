@@ -1,0 +1,23 @@
+<mat-form-field class="full-width" appearance="fill">
+    <input type="text"
+            placeholder="Search a phone name"
+            class="input-search"
+            matInput
+            [(ngModel)]="search"
+            [matAutocomplete]="auto"
+            (input)="searching()">
+
+    <mat-autocomplete autoActiveFirstOption 
+                        #auto="matAutocomplete"
+                        (optionSelected)="optionSelected($event)">
+
+    <mat-option *ngFor="let phone of phones" [value]="phone">
+        {{ phone.name }}
+    </mat-option>
+
+    <mat-option *ngIf="phones.length === 0">
+        No results for your search: {{ search }}
+    </mat-option>
+
+    </mat-autocomplete>
+</mat-form-field>        

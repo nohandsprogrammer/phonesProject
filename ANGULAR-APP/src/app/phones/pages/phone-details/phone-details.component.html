@@ -1,0 +1,43 @@
+<mat-grid-list cols="1" *ngIf="!phone; else divPhone">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divPhone>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+
+        <div fxFlex="50">
+            <div fxLayout="row">
+                <h1>{{ phone.name }}</h1>
+                <span class="space-between"></span>
+                <button mat-button color="warn" (click)="back()">Back to phone list</button>
+            </div>
+            <mat-divider></mat-divider>
+            <br/>
+            <div fxLayout="row">
+                <img [src]="phone | image" alt="{{ phone.name }}">
+            
+            </div>
+        </div>
+
+        <div fxFlex="50">
+            <h1>Specifications</h1>
+            <mat-divider></mat-divider>
+            <mat-list>
+                <mat-list-item> {{ phone.released_at }} </mat-list-item> <br/>
+                <mat-list-item>Body: {{ phone.body }} </mat-list-item> <br/>
+                <mat-list-item>OS: {{ phone.os }} </mat-list-item> <br/>
+                <mat-list-item>Storage: {{ phone.storage }} </mat-list-item> <br/>
+                <mat-list-item>Size: {{ phone.display_size }} </mat-list-item> <br/>
+                <mat-list-item>Screen Resolution: {{ phone.display_resolution }} </mat-list-item> <br/>
+                <mat-list-item>Camera Pixels: {{ phone.camera_pixels }} </mat-list-item> <br/>
+                <mat-list-item>Video Pixels: {{ phone.video_pixels }} </mat-list-item> <br/>
+                <mat-list-item>RAM: {{ phone.ram }} </mat-list-item> <br/>
+                <mat-list-item>Chipset: {{ phone.chipset }} </mat-list-item> <br/>
+                <mat-list-item>Battery Size and Type: {{ phone.battery_size }} {{ phone.battery_type }} </mat-list-item>
+            </mat-list>
+        </div>
+
+    </div>
+</ng-template>
